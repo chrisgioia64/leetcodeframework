@@ -1,11 +1,17 @@
 package base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Iterator;
 import java.util.List;
 
-public interface BootstrapTemplate<X, Y> {
+public abstract class BootstrapTemplate<X, Y> {
 
-    default void templateMethod() {
+    private final static Logger LOGGER = LogManager.getLogger(BootstrapTemplate.class);
+
+    public void templateMethod() {
+        LOGGER.info("Starting template method. ");
         SimilarityFunction<X, Y> similarityFunction = similarityFunction();
 
         // Test the simple algorithm
@@ -34,15 +40,15 @@ public interface BootstrapTemplate<X, Y> {
         }
     }
 
-    Algorithm<X, Y> simpleAlgorithm();
+    public abstract Algorithm<X, Y> simpleAlgorithm();
 
-    Algorithm<X, Y> advancedAlgorithm();
+    public abstract Algorithm<X, Y> advancedAlgorithm();
 
-    Iterator<X> inputGenerator();
+    public abstract Iterator<X> inputGenerator();
 
-    List<TestData<X, Y>> testDataCollection();
+    public abstract List<TestData<X, Y>> testDataCollection();
 
-    default SimilarityFunction<X, Y> similarityFunction() {
+    public SimilarityFunction<X, Y> similarityFunction() {
         return (input, actualOutput, expectedOutput) -> actualOutput.equals(expectedOutput);
     }
 

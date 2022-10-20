@@ -6,7 +6,7 @@ import base.utils.InputGeneratorUtil;
 import java.util.Iterator;
 import java.util.List;
 
-public class PalindromicSubstringTemplate implements BootstrapTemplate<String, String> {
+public class PalindromicSubstringTemplate extends BootstrapTemplate<String, String> {
 
     @Override
     public Algorithm<String, String> simpleAlgorithm() {
