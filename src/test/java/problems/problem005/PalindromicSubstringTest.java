@@ -1,16 +1,13 @@
 package problems.problem005;
 
-import base.BootstrapTemplate;
-import base.BootstrapTemplateTest;
-import base.problem.problem005.PalindromicSubstringTemplate;
-import org.testng.annotations.BeforeClass;
+import base.BootstrapBaseTest;
+import base.problem.problem005.PalindromicSubstringProblem;
 
-public class PalindromicSubstringTest extends BootstrapTemplateTest<String, String> {
+public class PalindromicSubstringTest extends BootstrapBaseTest<String, String> {
 
-    @BeforeClass
     @Override
-    public void setup() {
-        this.template = new PalindromicSubstringTemplate();
+    public void setTemplate() {
+        this.problemComponents = new PalindromicSubstringProblem();
     }
 
 }

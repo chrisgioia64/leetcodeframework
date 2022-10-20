@@ -6,25 +6,27 @@ import base.utils.InputGeneratorUtil;
 import java.util.Iterator;
 import java.util.List;
 
-public class PalindromicSubstringTemplate extends BootstrapTemplate<String, String> {
+public class PalindromicSubstringProblem extends ProblemComponents<String, String> {
 
     @Override
-    public Algorithm<String, String> simpleAlgorithm() {
+    public Algorithm<String, String> getSimpleAlgorithm() {
         return new PalindromicSubstringSimple();
     }
 
     @Override
-    public Algorithm<String, String> advancedAlgorithm() {
-        return new PalindromicSubstringAdvanced();
+    public List<Algorithm<String, String>> getAdvancedAlgorithms() {
+        return List.of(
+                new PalindromicSubstringAdvanced()
+        );
     }
 
     @Override
-    public Iterator<String> inputGenerator() {
+    public Iterator<String> getInputGenerator() {
         return InputGeneratorUtil.generateStrings();
     }
 
     @Override
-    public List<TestData<String, String>> testDataCollection() {
+    public List<TestData<String, String>> getTestDataCollection() {
         TestData<String, String> inp1
                 = new TestData<>("abbca","bb");
         TestData<String, String> inp2
@@ -37,7 +39,7 @@ public class PalindromicSubstringTemplate extends BootstrapTemplate<String, Stri
     }
 
     @Override
-    public SimilarityFunction<String, String> similarityFunction() {
+    public SimilarityFunction<String, String> getSimilarityFunction() {
         return (String input, String actualOutput, String expectedOutput) -> {
             if (actualOutput.length() != expectedOutput.length()) {
                 return false;
