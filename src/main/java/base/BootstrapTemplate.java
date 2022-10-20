@@ -21,7 +21,7 @@ public interface BootstrapTemplate<X, Y> {
         }
 
         // Test the advanced algorithm
-        Iterator<X> iterator = inputGenerator().generateInput();
+        Iterator<X> iterator = inputGenerator();
         Algorithm<X, Y> advanceAlgorithm = advancedAlgorithm();
         while (iterator.hasNext()) {
             X input = iterator.next();
@@ -29,6 +29,7 @@ public interface BootstrapTemplate<X, Y> {
             Y actualOutput = advanceAlgorithm.performAlgorithm(input);
             if (!similarityFunction.isSimilar(input, actualOutput, expectedOutput)) {
                 System.out.println("Advance Algorithm: " + input + " -> " + actualOutput + " vs. " + expectedOutput);
+                break;
             }
         }
     }
@@ -37,7 +38,7 @@ public interface BootstrapTemplate<X, Y> {
 
     Algorithm<X, Y> advancedAlgorithm();
 
-    InputGenerator<X> inputGenerator();
+    Iterator<X> inputGenerator();
 
     List<TestData<X, Y>> testDataCollection();
 

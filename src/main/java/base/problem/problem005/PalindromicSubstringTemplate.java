@@ -1,25 +1,26 @@
 package base.problem.problem005;
 
 import base.*;
+import base.utils.InputGeneratorUtil;
 
-import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class PalindromicSubstringTemplate implements BootstrapTemplate<String, String> {
 
     @Override
     public Algorithm<String, String> simpleAlgorithm() {
-        return (String x) -> "";
+        return new PalindromicSubstringSimple();
     }
 
     @Override
     public Algorithm<String, String> advancedAlgorithm() {
-        return (String x) -> "";
+        return new PalindromicSubstringAdvanced();
     }
 
     @Override
-    public InputGenerator<String> inputGenerator() {
-        return null;
+    public Iterator<String> inputGenerator() {
+        return InputGeneratorUtil.generateStrings();
     }
 
     @Override
