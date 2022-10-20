@@ -22,7 +22,8 @@ public abstract class BootstrapTemplate<X, Y> {
             Y output = testData.getOutput();
             Y actualOutput = simpleAlgorithm.performAlgorithm(input);
             if (!similarityFunction.isSimilar(input, actualOutput, output)) {
-                System.out.println("Simple Algorithm: " + input + " -> " + actualOutput + " vs. " + output);
+                LOGGER.info("Incorrect result for simple algorithm " + input + " -> " +
+                        actualOutput + " vs. " + output);
             }
         }
 
@@ -34,7 +35,8 @@ public abstract class BootstrapTemplate<X, Y> {
             Y expectedOutput = simpleAlgorithm.performAlgorithm(input);
             Y actualOutput = advanceAlgorithm.performAlgorithm(input);
             if (!similarityFunction.isSimilar(input, actualOutput, expectedOutput)) {
-                System.out.println("Advance Algorithm: " + input + " -> " + actualOutput + " vs. " + expectedOutput);
+                LOGGER.info("Incorrect result for advance algorithm. " + input + " -> "
+                    + actualOutput + " vs. " + expectedOutput);
                 break;
             }
         }
