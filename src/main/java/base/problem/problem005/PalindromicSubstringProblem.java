@@ -16,7 +16,8 @@ public class PalindromicSubstringProblem extends ProblemComponents<String, Strin
     @Override
     public List<Algorithm<String, String>> getAdvancedAlgorithms() {
         return List.of(
-                new PalindromicSubstringAdvanced()
+                new PalindromicSubstringAdvanced(),
+                new PalindromicSubstringAdvanced2()
         );
     }
 
