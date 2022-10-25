@@ -1,6 +1,6 @@
-package base.problem.problem005;
+package problems;
 
-import base.Algorithm;
+import base.algorithm.Algorithm;
 
 public class PalindromicSubstringAdvanced implements Algorithm<String, String> {
 
@@ -33,6 +33,11 @@ public class PalindromicSubstringAdvanced implements Algorithm<String, String> {
             }
         }
         return longest;
+    }
+
+    @Override
+    public String getVariantName() {
+        return "Dynamic Programming";
     }
 
 }

@@ -1,6 +1,6 @@
 package base.result;
 
-import base.Algorithm;
+import base.algorithm.Algorithm;
 
 import java.util.List;
 

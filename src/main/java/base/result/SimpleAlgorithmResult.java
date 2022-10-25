@@ -1,8 +1,6 @@
 package base.result;
 
-import base.Algorithm;
-import lombok.Builder;
-import lombok.Getter;
+import base.algorithm.Algorithm;
 
 import java.util.List;
 

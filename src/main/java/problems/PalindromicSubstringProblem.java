@@ -1,12 +1,26 @@
-package base.problem.problem005;
+package problems;
 
 import base.*;
+import base.algorithm.Algorithm;
+import base.problem.ProblemComponents;
+import base.problem.ProblemDifficulty;
+import base.problem.ProblemInformation;
+import base.problem.SimilarityFunction;
 import base.utils.InputGeneratorUtil;
 
 import java.util.Iterator;
 import java.util.List;
 
 public class PalindromicSubstringProblem extends ProblemComponents<String, String> {
+
+    @Override
+    public ProblemInformation getProblemInformation() {
+        return ProblemInformation.builder()
+                .name("Palindromic Substring")
+                .number(5)
+                .difficulty(ProblemDifficulty.MEDIUM)
+                .build();
+    }
 
     @Override
     public Algorithm<String, String> getSimpleAlgorithm() {

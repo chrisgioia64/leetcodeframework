@@ -1,7 +1,7 @@
 package problems.problem005;
 
 import base.BootstrapBaseTest;
-import base.problem.problem005.PalindromicSubstringProblem;
+import problems.PalindromicSubstringProblem;
 
 public class PalindromicSubstringTest extends BootstrapBaseTest<String, String> {
 

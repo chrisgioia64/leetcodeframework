@@ -1,4 +1,4 @@
-package base;
+package base.problem;
 
 public interface SimilarityFunction<X, Y> {
 

@@ -1,6 +1,6 @@
 package runner;
 
-import base.problem.problem005.PalindromicSubstringProblem;
+import problems.PalindromicSubstringProblem;
 import base.strategy.ApplicationEvaluationStrategy;
 
 public class TestRunner {

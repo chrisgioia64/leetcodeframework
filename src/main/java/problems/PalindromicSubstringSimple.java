@@ -1,6 +1,6 @@
-package base.problem.problem005;
+package problems;
 
-import base.Algorithm;
+import base.algorithm.Algorithm;
 
 public class PalindromicSubstringSimple implements Algorithm<String, String> {
 
@@ -18,6 +18,11 @@ public class PalindromicSubstringSimple implements Algorithm<String, String> {
             }
         }
         return longest;
+    }
+
+    @Override
+    public String getVariantName() {
+        return "Simple";
     }
 
     private boolean isPalindrome(String s) {

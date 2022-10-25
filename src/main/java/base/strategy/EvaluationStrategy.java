@@ -1,16 +1,13 @@
 package base.strategy;
 
-import base.Algorithm;
-import base.ProblemComponents;
-import base.SimilarityFunction;
+import base.algorithm.Algorithm;
+import base.problem.ProblemComponents;
+import base.problem.SimilarityFunction;
 import base.TestData;
 import base.result.*;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.Iterator;
 import java.util.LinkedList;

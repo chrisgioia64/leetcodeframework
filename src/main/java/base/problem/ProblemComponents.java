@@ -1,9 +1,14 @@
-package base;
+package base.problem;
+
+import base.TestData;
+import base.algorithm.Algorithm;
 
 import java.util.Iterator;
 import java.util.List;
 
 public abstract class ProblemComponents<X, Y> {
+
+    public abstract ProblemInformation getProblemInformation();
 
     public abstract Algorithm<X, Y> getSimpleAlgorithm();
 

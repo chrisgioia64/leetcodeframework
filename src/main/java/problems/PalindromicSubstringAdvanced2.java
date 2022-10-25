@@ -1,6 +1,6 @@
-package base.problem.problem005;
+package problems;
 
-import base.Algorithm;
+import base.algorithm.Algorithm;
 
 public class PalindromicSubstringAdvanced2 implements Algorithm<String, String> {
 
@@ -36,6 +36,11 @@ public class PalindromicSubstringAdvanced2 implements Algorithm<String, String> 
             }
         }
         return longest;
+    }
+
+    @Override
+    public String getVariantName() {
+        return "Expand around center";
     }
 
 }

@@ -1,11 +1,9 @@
 package base;
 
+import base.problem.ProblemComponents;
 import base.strategy.TestEvaluationStrategy;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.util.Iterator;
-import java.util.List;
 
 import static org.testng.Assert.fail;
 
