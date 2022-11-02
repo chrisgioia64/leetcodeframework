@@ -2,11 +2,13 @@ package base.types;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 import java.util.Arrays;
 
 @RequiredArgsConstructor
 @Getter
+@ToString
 public class IntegerArrayType {
 
     private final int[] ary;
@@ -24,13 +26,5 @@ public class IntegerArrayType {
     public int hashCode() {
         return Arrays.hashCode(ary);
     }
-
-    public static void main(String[] args) {
-        int[] ary1 = new int[] {1, 2, 3};
-        int[] ary2 = new int[] {1, 2, 3};
-        System.out.println(Arrays.hashCode(ary1));
-        System.out.println(Arrays.hashCode(ary2));
-    }
-
 
 }
