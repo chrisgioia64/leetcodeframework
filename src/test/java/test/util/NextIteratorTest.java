@@ -1,6 +1,7 @@
 package test.util;
 
 import base.utils.NextArrayIteratorNaive;
+import base.utils.NextArrayIteratorOptimized;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -8,8 +9,23 @@ import static org.testng.Assert.*;
 public class NextIteratorTest {
 
     @Test(timeOut = 2000)
-    public void testNextIterator() {
+    public void testNextIteratorNaive() {
         NextArrayIteratorNaive iter = new NextArrayIteratorNaive(3);
+        assertTrue(iter.hasNext());
+        assertEquals(iter.next().getAry(), new int[] {0, 0, 0});
+        assertEquals(iter.next().getAry(), new int[] {0, 0, 1});
+        assertEquals(iter.next().getAry(), new int[] {0, 1, 0});
+        assertEquals(iter.next().getAry(), new int[] {0, 1, 1});
+        assertEquals(iter.next().getAry(), new int[] {1, 0, 0});
+        assertEquals(iter.next().getAry(), new int[] {1, 0, 1});
+        assertEquals(iter.next().getAry(), new int[] {1, 1, 0});
+        assertEquals(iter.next().getAry(), new int[] {1, 1, 1});
+        assertFalse(iter.hasNext());
+    }
+
+    @Test(timeOut = 2000)
+    public void testNextIteratorOptimized() {
+        NextArrayIteratorOptimized iter = new NextArrayIteratorOptimized(3);
         assertTrue(iter.hasNext());
         assertEquals(iter.next().getAry(), new int[] {0, 0, 0});
         assertEquals(iter.next().getAry(), new int[] {0, 0, 1});

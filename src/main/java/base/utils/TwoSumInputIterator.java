@@ -6,8 +6,10 @@ import java.util.Iterator;
 
 public class TwoSumInputIterator implements Iterator<IntegerArrayType> {
 
-    public TwoSumInputIterator(int target) {
+    private int target;
 
+    public TwoSumInputIterator(int target) {
+        this.target = target;
     }
 
     @Override
