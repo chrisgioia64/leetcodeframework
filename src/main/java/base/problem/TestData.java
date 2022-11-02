@@ -1,4 +1,4 @@
-package base;
+package base.problem;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

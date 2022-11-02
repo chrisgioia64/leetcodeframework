@@ -1,7 +1,7 @@
-package base;
+package test.base;
 
 import base.problem.ProblemComponents;
-import base.strategy.TestEvaluationStrategy;
+import test.base.strategy.TestEvaluationStrategy;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

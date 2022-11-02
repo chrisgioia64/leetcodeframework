@@ -1,7 +1,6 @@
 package base.result;
 
 import lombok.Builder;
-import lombok.Getter;
 import lombok.NonNull;
 import lombok.Value;
 

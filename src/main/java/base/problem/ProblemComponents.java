@@ -1,6 +1,5 @@
 package base.problem;
 
-import base.TestData;
 import base.algorithm.Algorithm;
 
 import java.util.Iterator;

@@ -1,6 +1,6 @@
-package problems;
+package problems.problem005;
 
-import base.*;
+import base.problem.TestData;
 import base.algorithm.Algorithm;
 import base.problem.ProblemComponents;
 import base.problem.ProblemDifficulty;

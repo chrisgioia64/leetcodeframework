@@ -1,4 +1,4 @@
-package problems;
+package problems.problem005;
 
 import base.algorithm.Algorithm;
 

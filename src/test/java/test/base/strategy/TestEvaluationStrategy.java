@@ -1,4 +1,6 @@
-package base.strategy;
+package test.base.strategy;
+
+import base.strategy.EvaluationStrategy;
 
 import static org.testng.Assert.fail;
 

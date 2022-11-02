@@ -3,7 +3,7 @@ package base.strategy;
 import base.algorithm.Algorithm;
 import base.problem.ProblemComponents;
 import base.problem.SimilarityFunction;
-import base.TestData;
+import base.problem.TestData;
 import base.result.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -93,6 +93,10 @@ public abstract class EvaluationStrategy<X, Y> {
         return new BootstrapAlgorithmResult<X, Y>(simpleResult, advancedResult);
     }
 
+    /**
+     * Let subclasses (application and testing strategies) implement this method
+     * to provide custom behavior (e.g. perform an assertion in a unit test)
+     */
     protected abstract void incorrectResult(X input, Y actualResult, Y expectedResult);
 
 }
