@@ -5,8 +5,9 @@ package base.utils;
  */
 public class InputGeneratorUtil {
 
-    public static StringPermutationIterator generateStrings() {
-        return new StringPermutationIterator(5, "abcd");
+    public static StringProductIterator generateStrings() {
+        return new StringProductIterator(5, "abcd");
     }
+    
 
 }

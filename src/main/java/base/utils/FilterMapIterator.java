@@ -27,6 +27,8 @@ public class FilterMapIterator<T, V> implements Iterator<V> {
             if (pred.test(value)) {
                 this.last = func.apply(value);
                 return;
+            } else {
+
             }
         }
         this.end = true;

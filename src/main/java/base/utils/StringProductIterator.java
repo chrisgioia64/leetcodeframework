@@ -10,7 +10,7 @@ import java.util.Stack;
  * e.g. if CHARS = "AB" and SIZE = 3, then we would generate the strings:
  * "AAA", "AAB", "ABA", "ABB", "BAA", "BAB", "BBA", "BBB"
  */
-public class StringPermutationIterator implements Iterator<String> {
+public class StringProductIterator implements Iterator<String> {
 
     private int size;
     private char[] chars;
@@ -27,7 +27,7 @@ public class StringPermutationIterator implements Iterator<String> {
         }
     }
 
-    public StringPermutationIterator(int size, String chars) {
+    public StringProductIterator(int size, String chars) {
         this.size = size;
         this.chars = chars.toCharArray();
         this.ary = new char[size];

@@ -1,13 +1,12 @@
 package problems.problem001;
 
 import base.algorithm.Algorithm;
-import base.problem.ProblemComponents;
-import base.problem.ProblemDifficulty;
-import base.problem.ProblemInformation;
-import base.problem.TestData;
+import base.problem.*;
 import base.types.IntegerArrayType;
 import base.types.TwoSumType;
+import base.utils.TwoSumTargetIterator;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -24,17 +23,19 @@ public class TwoSumProblem extends ProblemComponents<TwoSumType, IntegerArrayTyp
 
     @Override
     public Algorithm<TwoSumType, IntegerArrayType> getSimpleAlgorithm() {
-        return null;
+        return new TwoSumSimple();
     }
 
     @Override
     public List<Algorithm<TwoSumType, IntegerArrayType>> getAdvancedAlgorithms() {
-        return null;
+        return Arrays.asList(new TwoSumHash());
     }
 
     @Override
     public Iterator<TwoSumType> getInputGenerator() {
-        return null;
+        return new TwoSumTargetIterator(
+                Arrays.asList(3, 5, 7)
+        );
     }
 
     @Override
@@ -70,5 +71,14 @@ public class TwoSumProblem extends ProblemComponents<TwoSumType, IntegerArrayTyp
                 new TestData<>(new TwoSumType(new int[] {-3, 8, 16, 1, 19, 12, 10, 5, 18}, 20),
                         new IntegerArrayType(new int[] {5, 1}));
         return List.of(inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8, inp9, inp10);
+    }
+
+    @Override
+    public SimilarityFunction<TwoSumType, IntegerArrayType> getSimilarityFunction() {
+        return (input, output1, output2) -> {
+            int[] o1 = output1.getAry();
+            int[] o2 = output2.getAry();
+            return (o1[0] == o2[0] && o1[1] == o2[1]) || (o1[0] == o2[1] && o1[1] == o2[0]);
+        };
     }
 }

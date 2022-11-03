@@ -13,7 +13,7 @@ import static org.testng.Assert.assertFalse;
 public class FilterMapIteratorTest {
 
     @Test
-    public void test1() {
+    public void testFilterMapIterator() {
         NextArrayIteratorOptimized originalIter = new NextArrayIteratorOptimized(4);
         FilterMapIterator<IntegerArrayType, Integer> iter =
                 new FilterMapIterator<>(originalIter,
