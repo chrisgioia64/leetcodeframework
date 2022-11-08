@@ -9,9 +9,9 @@ I use an approach called the **bootstrap** where the user provides two algorithm
 - Use of the `Strategy` design pattern to implement the Bootstrap algorithm.
 - Algorithms, manual test data, and auto-generated input data for the *TwoSum* and *PalindromicSubstring* leetcode problems.
 - A wide variety of iterators that support auto-generation of the input data including: *StringProductIterator* (for generating different combinations of strings from a character set), *PermutationIterator* (complex algorithm for supporting an iterator version of the backtracking algorithm approach for generating permutations), *FilterMapIterator* (using Java 8 functional programming for supporting an iterator that does filter and map operations.).
-- Conversion between data types (e.g. String that correspond to input and output of an algorithm) and a database string representation to be used for flexible data persistence of a wide variety of data types. Will be used to persist Strings, Integer Arrays, Linked List, and Trees.
+- Conversion between data types representing the input and output of an algorithm and a database string representation that is to be used for future database persistence. Will be used to persist a variety of types including Strings, Integer Arrays, Linked List, and Trees.
 - A parallel merge sort algorithm that makes use of simple concurrency constructs such as `Thread`, `Runnable`, and `joins`.
-- Unit testing of each problem and its related algorithms to easily determine if the simple and advance algorithms are working correctly.
+- Unit testing of each problem and its related algorithms that is DRY (Don't Repeat Yourself) that easily determines if the simple and advance algorithms are working correctly.
 
 ## Proposed Features
 
